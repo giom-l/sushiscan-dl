@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "sushiscan-dl",
+    "version": "1.0",
+    "description": "Add a download button on sushiscan",
+    "icons": {},
+    "content_scripts": [
+        {
+            "matches": [
+                "https://sushiscan.net/*/"
+            ],
+            "js": [
+                "jspdf.umd.min.js",
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "https://sushiscan.net/*",
+        "downloads"
+    ]
+}

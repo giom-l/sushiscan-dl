@@ -7,21 +7,24 @@
     "content_scripts": [
         {
             "matches": [
-                "https://sushiscan.net/*/"
+                "*://*.sushiscan.net/*"
             ],
             "js": [
-                "jspdf.umd.min.js",
+				"jspdf.umd.min.js",
                 "content.js"
             ]
         }
     ],
+	"web_accessible_resources": [
+		"convert-worker.js"
+	],
     "background": {
         "scripts": [
             "background.js"
         ]
     },
     "permissions": [
-        "https://sushiscan.net/*",
+        "*://*.sushiscan.net/*",
         "downloads"
     ]
 }
